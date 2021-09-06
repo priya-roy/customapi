@@ -1,0 +1,6 @@
+# custom Event subscriber to route subscriber
+services:
+  mymodule.route_subscriber:
+    class: Drupal\customapi\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

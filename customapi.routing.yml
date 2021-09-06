@@ -1,0 +1,12 @@
+siteapikey.content:
+  path: '/page_json/{site_api_key}/{node}'
+  defaults:
+    _controller: '\Drupal\customapi\Controller\CustomSiteApiKeyController::content'
+  options:
+      parameters:
+        site_api_key:
+          type: String
+        node:
+          type: entity:node
+  requirements:
+    _permission: 'access content'
